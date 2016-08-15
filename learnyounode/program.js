@@ -1,8 +1,4 @@
-var argLength = process.argv.length;
-var counter = 2;
-var argTotal = 0;
-while (counter < argLength) {
-	argTotal += +process.argv[counter];
-	counter++;
-};
-console.log(argTotal);
+var fs = require('fs');
+var inputFile = fs.readFileSync(process.argv[2]).toString().split('\n');
+var lineCount = inputFile.length - 1;
+console.log(lineCount);;
